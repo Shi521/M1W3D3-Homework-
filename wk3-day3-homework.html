@@ -86,22 +86,22 @@
       });
 
       //fraction
-      function fractionNumber(num) {
-        var fractionNumber = num1 / num2 * 100;
-        document.getElementById ("solution").innerHTML = num1 + " is " + fractionNumber + "% of " + num2;
+      function fractionNumber(num1,num2) {
+        var percentage = (num1/num2) * 100 ;
+        document.getElementById ("solution").innerHTML = num1 + " is " + percentage + "% of " + num2;
       }
       var percentButton = document.getElementById("percent-button");
       percentButton.addEventListener("click", function () {
         var num1 = document.getElementById("percent1-input").value;
-        var num2 = ducument.getElementById("percent2-input").value;
-        fractionNumber(num);
+        var num2 = document.getElementById("percent2-input").value;
+        fractionNumber(num1,num2);
       });
 
       //integer
       function integerNumber(num) {
-        
+        var integerNumber = Math.round (num);
         document.getElementById("solution").innerHTML =
-          "The nearest whole number of" + num + " is " + integerNumber;
+          "The nearest whole number of " + num + " is " + integerNumber;
       }
       var halfButton = document.getElementById("int-button");
       halfButton.addEventListener("click", function () {
